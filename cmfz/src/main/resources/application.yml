@@ -6,11 +6,11 @@ server:
       develoment: true
 spring:
   datasource:
-    username: hr
-    password: hr
-    driver-class-name: oracle.jdbc.OracleDriver
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:oracle:thin:@localhost:1521:xe
+    url: jdbc:mysql://localhost:3999/cmfz1
   mvc:
     view:
       suffix: .jsp
