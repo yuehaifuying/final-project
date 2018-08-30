@@ -1,16 +1,24 @@
 package com.baizhi.dao;
 
+
 import com.baizhi.entity.User;
+import com.baizhi.entity.UserStatistical;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
-
-/**
- * Created by Administrator on 2018/8/28 0028.
- */
+@Mapper
 public interface UserDAO {
-
-    public void save(User user);
-    public List<User> queryAll();
-
-
+    User queryUserByAccount(String account);
+    User queryUserById(String id);
+    List<User> queryAll(@Param("start") int start, @Param("rows") int rows);
+    void update(User user);
+    void regist(User user);
+    void freeze(String id);
+    void unFreeze(String id);
+    UserStatistical queryActive(Date date);
+    List<User> queryAllUsers();
+    List<User> queryByRandom(String uid);
+    void modify(User user);
 }

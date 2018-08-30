@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-@MapperScan("com.baizhi.dao")
+@MapperScan(basePackages="com.baizhi.dao")
 public class CmfzApp {
     public static void main(String[] args) {
         SpringApplication.run(CmfzApp.class,args);
